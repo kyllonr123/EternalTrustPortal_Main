@@ -17,7 +17,7 @@
       display: none;
     }
     .content {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
       background: #222;
@@ -26,6 +26,22 @@
     }
     a {
       color: #00ffcc;
+    }
+    .files {
+      text-align: left;
+      margin-top: 30px;
+    }
+    .files h3 {
+      color: #00ffcc;
+      border-bottom: 1px solid #00ffcc88;
+      padding-bottom: 5px;
+    }
+    .files ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .files li {
+      margin: 10px 0;
     }
   </style>
 </head>
@@ -38,13 +54,29 @@
   <div id="private-content" class="hidden content">
     <h2>🛡️ Access Granted</h2>
     <p>Welcome, trusted PMA member.</p>
-    <p>Use the links below to access exclusive files and teachings:</p>
-    <ul>
-      <li><a href="certificate.html" target="_blank">📜 View PMA Certificate</a></li>
-      <li><a href="badge.html" target="_blank">🪪 View Member Badge</a></li>
-      <li><a href="scrolls.html" target="_blank">📂 Browse Private Scroll Archive</a></li>
-    </ul>
-    <p><a href="#" onclick="netlifyIdentity.logout(); return false;">Log Out</a></p>
+
+    <div class="files">
+      <h3>📜 Core Trust Scrolls</h3>
+      <ul>
+        <li><a href="scrolls/Seal_Scroll_Signed_4-27-2025.pdf" target="_blank">Trust & Seal Authority Scroll</a></li>
+        <li><a href="scrolls/Fee_Schedule.pdf" target="_blank">Fee Schedule</a></li>
+        <li><a href="scrolls/Trust_Resolution.pdf" target="_blank">Trust Resolution</a></li>
+      </ul>
+
+      <h3>📂 Affidavits & Presentment Docs</h3>
+      <ul>
+        <li><a href="scrolls/Witness_Affidavit.pdf" target="_blank">Witness Affidavit</a></li>
+        <li><a href="scrolls/Presentment_Log.pdf" target="_blank">Presentment & Ledger Log</a></li>
+      </ul>
+
+      <h3>🗂️ Member Resources</h3>
+      <ul>
+        <li><a href="badge-qr.html" target="_blank">View QR Member Badge</a></li>
+        <li><a href="certificate.html" target="_blank">Membership Certificate Viewer</a></li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 40px;"><a href="#" onclick="netlifyIdentity.logout(); return false;">Log Out</a></p>
   </div>
 
   <script>

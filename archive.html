@@ -1,70 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>📜 Archive of Scrolls</title>
+  <title>📜 RobinsonVillage Scroll Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom, #3B2F2F, #4B6F44);
+      background: linear-gradient(to bottom, #2e2e2e, #4B6F44);
       color: white;
-      padding: 40px 20px;
+      font-family: 'Georgia', serif;
       text-align: center;
+      padding: 40px 20px;
     }
 
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
+```
+h1 {
+  margin-bottom: 30px;
+  color: #00ffcc;
+}
 
-    p {
-      font-style: italic;
-      margin-bottom: 30px;
-    }
+.scroll-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .scroll-links {
-      max-width: 800px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
+.scroll-links a {
+  display: block;
+  background: #222;
+  padding: 14px;
+  border-radius: 10px;
+  color: #00ffcc;
+  text-decoration: none;
+  box-shadow: 0 0 8px #000;
+  transition: background 0.3s;
+}
 
-    .scroll-links a {
-      display: block;
-      background: #222;
-      padding: 16px;
-      border-radius: 10px;
-      color: #00ffcc;
-      text-decoration: none;
-      font-size: 1.1em;
-      box-shadow: 0 0 12px #000;
-      transition: all 0.3s ease;
-    }
+.scroll-links a:hover {
+  background: #00ffcc;
+  color: black;
+}
+```
 
-    .scroll-links a:hover {
-      background: #00ffcc;
-      color: #222;
-    }
   </style>
 </head>
 <body>
 
-  <h1>📜 Archive of Scrolls</h1>
-  <p>Welcome to the living archive of the Eternal RobinsonVillage Bloodline Legacy Trust. Each scroll below stands as a record of truth, remedy, and divine governance.</p>
+  <h1>📜 RobinsonVillage Trust Scroll Archive</h1>
+  <p>Verified documents, declarations, and lawful instruments preserved in the public trust record.</p>
 
-  <div class="scroll-links">
-    <a href="id.html">🪪 Trustee ID Display</a>
-    <a href="scroll-court.html">⚖️ Court Remedy Packet</a>
-    <a href="scroll-impound.html">🚓 Impound Defense Packet</a>
-    <a href="fees.html">💸 Fee Schedule</a>
-    <a href="jurisdiction.html">📖 Jurisdiction Declaration</a>
-    <a href="witness.html">🖋️ Witness Affidavits</a>
-    <a href="log.html">🗂️ Presentment & Ledger Log</a>
-    <a href="scroll-tort.html">📑 Tort Claim Packet</a>
-  </div>
+  <section class="scroll-links">
+    <a href="scrolls/Seal_Scroll_Signed_4-27-2025.pdf" target="_blank">🛡️ Signed Seal Scroll of Authority – Issued 4-27-2025</a>
+    <!-- Add additional scrolls below as needed -->
+  </section>
 
 </body>
 </html>

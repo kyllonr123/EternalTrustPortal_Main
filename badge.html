@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🛡️ PMA Member Badge – RobinsonVillage</title>
+  <meta charset="UTF-8" />
+  <title>🪪 PMA Member Badge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
   <style>
     body {
-      background: #1f1f1f;
+      background: #1a1a1a;
       color: #00ffcc;
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       text-align: center;
       padding: 40px 20px;
     }
-
-    .pma-badge {
+    .badge {
       background: #222;
-      border: 2px solid #00ffcc;
-      border-radius: 16px;
-      width: 320px;
-      margin: auto;
       padding: 20px;
-      color: white;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
       box-shadow: 0 0 12px #00ffcc88;
     }
-
-    .pma-badge img {
-      width: 120px;
-      border-radius: 10px;
-      border: 2px solid #00ffcc;
-      margin-bottom: 15px;
-    }
-
-    .pma-badge h2 {
-      margin: 10px 0 5px;
-      color: #00ffcc;
-    }
-
-    .pma-badge p {
-      margin: 4px 0;
+    .qr {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
-  <h1>🛡️ RobinsonVillage PMA Member Badge</h1>
-
-  <div class="pma-badge">
-    <img src="assets/trustee_photo.png" alt="Kyllon Anthony">
-    <h2>Kyllon Anthony</h2>
-    <p><strong>PMA ID:</strong> RLEA-2025-0001</p>
-    <p><strong>Status:</strong> Private Member</p>
-    <p><strong>Jurisdiction:</strong><br> Ecclesiastical · Natural Law · Trust Law</p>
+  <h1>🪪 PMA Member Badge</h1>
+  <div class="badge">
+    <p><strong>ID:</strong> <span id="pmaID"></span></p>
+    <p><strong>Status:</strong> Private Member under Ecclesiastical & Trust Law</p>
+    <div id="qr" class="qr"></div>
   </div>
+  <script>
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
 
+    const pmaID = getQueryParam('id');
+    const idDisplay = document.getElementById('pmaID');
+    const qrContainer = document.getElementById('qr');
+
+    if (pmaID) {
+      idDisplay.textContent = pmaID;
+      const qrUrl = `https://robinsonvillagelegacy.org/badge.html?id=${pmaID}`;
+      QRCode.toCanvas(document.createElement('canvas'), qrUrl, { width: 180 }, (err, canvas) => {
+        if (!err) qrContainer.appendChild(canvas);
+      });
+    } else {
+      idDisplay.textContent = '[Missing ID]';
+    }
+  </script>
 </body>
 </html>

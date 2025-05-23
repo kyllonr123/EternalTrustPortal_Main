@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📤 PMA Member Upload Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1a1a1a, #4B6F44);
+      color: #00ffcc;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    form {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 12px #00ffcc88;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: 'Georgia', serif;
+    }
+    button {
+      background: #00ffcc;
+      color: black;
+      font-size: 1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00e0b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📤 Upload Member File – RobinsonVillage PMA</h1>
+  <p>Submit your affidavit, ID photo, or signed declaration for member records.</p>
+
+  <form name="member-upload" method="POST" data-netlify="true" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="member-upload" />
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="text" name="member_id" placeholder="PMA Member ID (e.g. RLEA-2025-0001)" required />
+    <textarea name="note" placeholder="Optional message or reason..." rows="4"></textarea>
+    <input type="file" name="attachment" required />
+    <button type="submit">Upload File</button>
+  </form>
+</body>
+</html>

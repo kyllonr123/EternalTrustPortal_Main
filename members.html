@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 PMA Member Portal – RobinsonVillage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #2e2e2e, #4B6F44);
+      color: white;
+      font-family: 'Georgia', serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hidden {
+      display: none;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffcc88;
+    }
+    a {
+      color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Welcome to the RobinsonVillage PMA Members Portal</h1>
+  <div id="auth-section">
+    <p>Loading membership authentication...</p>
+  </div>
+
+  <div id="private-content" class="hidden content">
+    <h2>🛡️ Access Granted</h2>
+    <p>Welcome, trusted PMA member.</p>
+    <p>Use the links below to access exclusive files and teachings:</p>
+    <ul>
+      <li><a href="certificate.html" target="_blank">📜 View PMA Certificate</a></li>
+      <li><a href="badge.html" target="_blank">🪪 View Member Badge</a></li>
+      <li><a href="scrolls.html" target="_blank">📂 Browse Private Scroll Archive</a></li>
+    </ul>
+    <p><a href="#" onclick="netlifyIdentity.logout(); return false;">Log Out</a></p>
+  </div>
+
+  <script>
+    netlifyIdentity.on("init", user => {
+      if (!user) {
+        netlifyIdentity.open();
+      } else {
+        document.getElementById("auth-section").classList.add("hidden");
+        document.getElementById("private-content").classList.remove("hidden");
+      }
+    });
+    netlifyIdentity.on("login", () => {
+      location.reload();
+    });
+    netlifyIdentity.on("logout", () => {
+      location.reload();
+    });
+    netlifyIdentity.init();
+  </script>
+</body>
+</html>

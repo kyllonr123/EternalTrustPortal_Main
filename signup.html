@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📝 PMA Membership Signup – RobinsonVillage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #2e2e2e, #4B6F44);
+      color: white;
+      font-family: 'Georgia', serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    form {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 12px #00ffcc88;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: 'Georgia', serif;
+    }
+    button {
+      background: #00ffcc;
+      color: black;
+      font-size: 1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00e0b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 Request Membership – RobinsonVillage PMA</h1>
+  <p>Please complete the form below to be considered for private membership.</p>
+
+  <form name="pma-signup" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="pma-signup" />
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <textarea name="reason" rows="5" placeholder="Why do you wish to join this PMA?" required></textarea>
+    <button type="submit">Submit Request</button>
+  </form>
+</body>
+</html>

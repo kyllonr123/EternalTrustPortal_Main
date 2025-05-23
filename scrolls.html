@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📜 Trust Scroll Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #2e2e2e, #4B6F44);
+      color: white;
+      font-family: 'Georgia', serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+
+    #fileList {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .file-link {
+      background: #222;
+      padding: 14px;
+      border-radius: 10px;
+      color: #00ffcc;
+      text-decoration: none;
+      box-shadow: 0 0 8px #000;
+      transition: all 0.3s;
+    }
+
+    .file-link:hover {
+      background: #00ffcc;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📜 RobinsonVillage Scrolls</h1>
+  <p>All verified trust scrolls, affidavits, and sacred documents listed dynamically.</p>
+
+  <div id="fileList">Loading scrolls...</div>
+
+  <script>
+    // Simulate file list (replace this array with server-side generation if needed)
+    const scrollFiles = [
+      "Seal_Scroll_Signed_4-27-2025.pdf",
+      "Affidavit_of_Status.pdf",
+      "Notice_of_Public_Claim.pdf",
+      "UCC1_Financing_Statement.pdf"
+    ];
+
+    const fileListContainer = document.getElementById("fileList");
+    fileListContainer.innerHTML = "";
+
+    scrollFiles.forEach(file => {
+      const link = document.createElement("a");
+      link.href = `scrolls/${file}`;
+      link.target = "_blank";
+      link.className = "file-link";
+      link.textContent = formatFileName(file);
+      fileListContainer.appendChild(link);
+    });
+
+    function formatFileName(fileName) {
+      return fileName.replace(/_/g, " ").replace(/\.pdf$/, "").replace(/-/g, "/");
+    }
+  </script>
+
+</body>
+</html>

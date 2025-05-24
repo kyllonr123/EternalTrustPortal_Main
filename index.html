@@ -12,11 +12,9 @@
       color: white;
       text-align: center;
     }
-
     header {
       padding: 40px 20px;
     }
-
     .trustee-photo {
       width: 180px;
       border-radius: 12px;
@@ -24,7 +22,6 @@
       margin-bottom: 20px;
       box-shadow: 0 0 18px #00ffcc88;
     }
-
     .seals {
       display: flex;
       justify-content: center;
@@ -32,24 +29,20 @@
       flex-wrap: wrap;
       margin: 30px 0;
     }
-
     .seals img {
       width: 120px;
       border-radius: 10px;
       box-shadow: 0 0 12px #ffffff55;
     }
-
     audio {
       margin: 20px auto;
     }
-
     .section-title {
       margin-top: 50px;
       font-size: 1.5em;
       text-decoration: underline;
       color: #00ffcc;
     }
-
     .scroll-links {
       max-width: 800px;
       margin: 20px auto;
@@ -58,7 +51,6 @@
       gap: 16px;
       padding: 0 20px;
     }
-
     .scroll-links a {
       display: block;
       background: #222;
@@ -70,12 +62,10 @@
       box-shadow: 0 0 10px #000;
       transition: all 0.3s ease;
     }
-
     .scroll-links a:hover {
       background: #00ffcc;
       color: black;
     }
-
     .asn-section img,
     .id-preview img {
       width: 180px;
@@ -84,20 +74,30 @@
       box-shadow: 0 0 10px #00ffcc88;
       margin-top: 10px;
     }
+    .apply-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 24px;
+      background: #00ffcc;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ffccaa;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="assets/trustee_photo.png" alt="Trustee Photo" class="trustee-photo" />
+    <div class="seals">
+      <p><a href="assets/robinsonvillage_trust_seal.png" target="_blank" title="Click to view Trust Seal">🛡️ View Trust Seal</a></p>
+      <p><a href="assets/robinsonvillage_pma_seal.png" target="_blank" title="Click to view PMA Seal">🛡️ View PMA Seal</a></p>
+    </div>
     <h1>🌿 Eternal RobinsonVillage Trust Portal</h1>
     <p>Official gateway to the living record of the Eternal Bloodline Legacy Trust. Governed by Divine Right, Private Law, and Natural Order.</p>
   </header>
-
-  <div class="seals">
-    <p><a href="assets/robinsonvillage_trust_seal.png" target="_blank" title="Click to view Trust Seal">🛡️ View Trust Seal</a></p>
-    <p><a href="assets/robinsonvillage_pma_seal.png" target="_blank" title="Click to view PMA Seal">🛡️ View PMA Seal</a></p>
-  </div>
 
   <audio autoplay loop controls>
     <source src="assets/background-vibe.mp3" type="audio/mpeg" />
@@ -127,8 +127,6 @@
   <div class="section-title">📜 Scrolls</div>
   <section class="scroll-links">
     <a href="archive.html">📜 Archive of Scrolls</a>
-    <a href="scrolls.html">📜 Dynamic Scroll Archive</a>
-    <a href="pma.html">🛡️ PMA Overview – RobinsonVillage Legacy Empowerment</a>
     <a href="id.html">🪪 Trustee ID Display</a>
     <a href="scroll-court.html">⚖️ Court Remedy Packet</a>
     <a href="scroll-impound.html">🚓 Impound Defense Packet</a>
@@ -136,6 +134,7 @@
     <a href="jurisdiction.html">📖 Jurisdiction Declaration</a>
     <a href="witness.html">🖋️ Witness Affidavits</a>
     <a href="log.html">🗂️ Presentment & Ledger Log</a>
+    <a href="pma.html" style="background:#00ffcc;color:black;font-weight:bold;">🔐 PMA Overview</a>
   </section>
 
   <div class="section-title">🛡️ Public Claims</div>
@@ -143,6 +142,10 @@
     <a href="scroll-public-claim-court.html">🛡️ Public Claim: Court Remedy</a>
     <a href="scroll-lien.html">📎 UCC-1 Lien Enforcement</a>
   </section>
+
+  <a href="https://forms.gle/YOUR_FORM_ID_HERE" target="_blank" class="apply-button">
+    📝 Apply for PMA Membership
+  </a>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>🛡️ RobinsonVillage Legacy Empowerment Association (PMA)</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔐 RobinsonVillage PMA Overview</title>
   <style>
     body {
       background: linear-gradient(to bottom, #2e2e2e, #4B6F44);
@@ -12,82 +12,69 @@
       text-align: center;
       padding: 40px 20px;
     }
-    h1, h2 {
-      color: #00ffcc;
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
-    .seal {
-      margin: 30px auto;
+    p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
     }
-    .seal img {
-      width: 160px;
+    .badge-search {
+      background: #111;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 12px #ffffff44;
-    }
-    .content {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.1em;
-      line-height: 1.6em;
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    .apply-button {
       display: inline-block;
-      margin-top: 20px;
+      box-shadow: 0 0 10px #00ffcc88;
+    }
+    input, button {
+      padding: 12px;
+      margin: 8px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+    }
+    input {
+      width: 220px;
+    }
+    button {
+      background: #00ffcc;
+      color: black;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00e0b3;
+    }
+    .form-link {
+      display: inline-block;
+      margin-top: 30px;
       padding: 12px 24px;
-      font-size: 1.1em;
       background: #00ffcc;
       color: black;
       font-weight: bold;
       border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 0 10px #00ffcc88;
-      transition: background 0.3s;
-    }
-    .apply-button:hover {
-      background: #00ddb3;
+      box-shadow: 0 0 10px #00ffccaa;
     }
   </style>
 </head>
 <body>
 
-  <h1>🛡️ RobinsonVillage Legacy Empowerment Association</h1>
-  <div class="seal">
-    <img src="assets/robinsonvillage_pma_seal.png" alt="PMA Seal" />
+  <h1>🔐 RobinsonVillage PMA Overview</h1>
+  <p>Welcome to the Private Membership Association dedicated to spiritual sovereignty and divine law. Members receive official ID badges, protected access to our scrolls, and QR verification.</p>
+
+  <div class="badge-search">
+    <h2>🪪 View Your PMA Member Badge</h2>
+    <form action="badge.html" method="get" target="_blank">
+      <input name="id" type="text" placeholder="Enter your PMA ID (e.g. RLEA-2025-0001)" required />
+      <button type="submit">🔍 View Badge</button>
+    </form>
   </div>
 
-  <div class="content">
-    <p>
-      This Private Membership Association is formed by living men and women who have declared their intent to operate in private under Divine Natural Law, Trust Law, and the Law of Contracts.
-    </p>
-    <p>
-      Our purpose is to free the mass from mental bondage and enlighten them to align with the Most High and shift with Mother Earth to 5D.
-    </p>
-    <p>
-      Governed by private contract, this Association exists beyond the jurisdiction of any public code, mandate, or corporate statute. Membership is by private invitation and agreement only.
-    </p>
-    <p>
-      Documents, events, and benefits within this PMA are intended solely for its members. This includes access to sacred teachings, scrolls, land events, and legacy empowerment.
-    </p>
+  <a href="https://forms.gle/9fQbdrAKC1yAHZ4c6" target="_blank" class="form-link">
+    📝 Apply for PMA Membership
+  </a>
 
-    <p><strong>Jurisdiction:</strong> Ecclesiastical Trust Law · Law of Nature · UCC · Common Law · Divine Law</p>
-
-    <p>📜 <a href="scrolls/Seal_Scroll_Signed_4-27-2025.pdf" target="_blank">View Trust & Seal Authority Scroll</a></p>
-    <p>🎖️ <a href="badge.html" target="_blank">View Active PMA Badge</a></p>
-    <p>📄 <a href="certificate.html" target="_blank">View PMA Membership Certificate</a></p>
-    <p>🪪 <a href="badge-qr.html" target="_blank">Scan QR Badge Viewer</a></p>
-    <p>🗂️ <a href="members.html" target="_blank">Access Secure File Dashboard</a></p>
-    <p>🛠️ <a href="qr-gen.html" target="_blank">Generate Custom QR Badge</a></p>
-    <p>📤 <a href="upload.html" target="_blank">Upload Member Documents</a></p>
-
-    <a class="apply-button" href="signup.html" target="_blank">📝 Apply for PMA Membership</a>
-  </div>
-
-  <form action="badge.html" method="get" target="_blank" style="margin-top:40px;">
-  <input name="id" type="text" placeholder="Enter PMA ID" required style="padding:10px;font-size:1em;" />
-  <button type="submit" style="padding:10px 20px;">View My Badge</button>
-</form>
 </body>
 </html>

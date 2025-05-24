@@ -2,56 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>🪪 PMA Member Badge</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <title>PMA Member Badge</title>
   <style>
     body {
-      background: #1a1a1a;
+      background: #222;
       color: #00ffcc;
       font-family: Georgia, serif;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px;
     }
     .badge {
-      background: #222;
-      padding: 20px;
+      border: 3px solid #00ffcc;
       border-radius: 12px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 0 12px #00ffcc88;
+      padding: 30px;
+      background: #111;
+      display: inline-block;
     }
-    .qr {
+    img {
       margin-top: 20px;
+      width: 200px;
     }
   </style>
 </head>
 <body>
-  <h1>🪪 PMA Member Badge</h1>
+  <h1>🌿 RobinsonVillage PMA</h1>
   <div class="badge">
-    <p><strong>ID:</strong> <span id="pmaID"></span></p>
-    <p><strong>Status:</strong> Private Member under Ecclesiastical & Trust Law</p>
-    <div id="qr" class="qr"></div>
+    <h2 id="idNumber">Member ID:</h2>
+    <img id="qrImage" src="" alt="QR Code" />
   </div>
+
   <script>
-    function getQueryParam(name) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(name);
-    }
-
-    const pmaID = getQueryParam('id');
-    const idDisplay = document.getElementById('pmaID');
-    const qrContainer = document.getElementById('qr');
-
-    if (pmaID) {
-      idDisplay.textContent = pmaID;
-      const qrUrl = `https://robinsonvillagelegacy.org/badge.html?id=${pmaID}`;
-      QRCode.toCanvas(document.createElement('canvas'), qrUrl, { width: 180 }, (err, canvas) => {
-        if (!err) qrContainer.appendChild(canvas);
-      });
-    } else {
-      idDisplay.textContent = '[Missing ID]';
-    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id') || 'UNKNOWN';
+    document.getElementById('idNumber').textContent = 'PMA ID: ' + id;
+    document.getElementById('qrImage').src =
+      'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' +
+      encodeURIComponent(window.location.href);
   </script>
 </body>
 </html>

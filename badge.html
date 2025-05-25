@@ -5,11 +5,11 @@
   <title>PMA Member Badge</title>
   <style>
     body {
-      background: #222;
+      background: #1c1c1c;
       color: #00ffcc;
       font-family: Georgia, serif;
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
     }
     .badge {
       border: 3px solid #00ffcc;
@@ -17,27 +17,64 @@
       padding: 30px;
       background: #111;
       display: inline-block;
+      box-shadow: 0 0 15px #00ffcc88;
+      max-width: 420px;
     }
     img {
       margin-top: 20px;
       width: 200px;
     }
+    h1, h2 {
+      margin: 10px 0;
+    }
+    .footer-note {
+      font-size: 0.9em;
+      color: #cccccc;
+      margin-top: 20px;
+    }
+    .download-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #00ffcc;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <h1>🌿 RobinsonVillage PMA</h1>
-  <div class="badge">
-    <h2 id="idNumber">Member ID:</h2>
+  <div class="badge" id="badgeArea">
+    <h2 id="memberName">Member:</h2>
+    <h2 id="idNumber">PMA ID:</h2>
     <img id="qrImage" src="" alt="QR Code" />
+    <p class="footer-note">Protected under Private Trust Law</p>
   </div>
+
+  <button class="download-btn" onclick="downloadBadge()">⬇️ Download Badge</button>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id') || 'UNKNOWN';
+    const name = urlParams.get('name') || 'Unspecified';
+
     document.getElementById('idNumber').textContent = 'PMA ID: ' + id;
+    document.getElementById('memberName').textContent = 'Member: ' + decodeURIComponent(name);
     document.getElementById('qrImage').src =
       'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' +
       encodeURIComponent(window.location.href);
+
+    function downloadBadge() {
+      html2canvas(document.getElementById("badgeArea")).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `${id}_badge.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 </html>

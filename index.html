@@ -85,6 +85,24 @@
       text-decoration: none;
       box-shadow: 0 0 10px #00ffccaa;
     }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .video-block iframe {
+      width: 100%;
+      border-radius: 12px;
+      height: 200px;
+    }
+    .video-block h3 {
+      font-size: 1em;
+      color: #00ffcc;
+      margin: 10px 0 0 0;
+    }
   </style>
 </head>
 <body>
@@ -144,7 +162,35 @@
     <a href="scroll-lien.html">📎 UCC-1 Lien Enforcement</a>
   </section>
 
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQYHh4ll-KHxUq9QuLcA9CAWn6HHvfB3Fqz_SypU4iptyjLw/viewform?usp=sf_link" target="_blank" class="apply-button">
+  <div class="section-title">🎥 Featured Video Evidence</div>
+  <div class="video-grid">
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/0_LQIhBDl2E" title="May 4 Trespass: Part 1" allowfullscreen></iframe>
+      <h3>May 4 Trespass – Part 1</h3>
+    </div>
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/rCb64sW_Xhs" title="May 4 Trespass: Part 2" allowfullscreen></iframe>
+      <h3>May 4 Trespass – Part 2</h3>
+    </div>
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/D-M3EiagD0E" title="May 4 Impound Call" allowfullscreen></iframe>
+      <h3>May 4 – Impound Call</h3>
+    </div>
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/i1Dmt38Elhs" title="May 4 Supervisor Call" allowfullscreen></iframe>
+      <h3>May 4 – Supervisor Call</h3>
+    </div>
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/OmDsURswBRM" title="Oct 31 Kidnapping Clip 1" allowfullscreen></iframe>
+      <h3>Oct 31 Kidnapping – Clip 1</h3>
+    </div>
+    <div class="video-block">
+      <iframe src="https://www.youtube.com/embed/3YL-qxpX-UQ" title="Oct 31 Kidnapping Clip 2" allowfullscreen></iframe>
+      <h3>Oct 31 Kidnapping – Clip 2</h3>
+    </div>
+  </div>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQYHh4ll-KHxUq9QuLcA9CAWn6HHvfB3Fqz_SypU4iptyjLw/viewform?usp=header" target="_blank" class="apply-button">
     📝 Apply for PMA Membership
   </a>
 

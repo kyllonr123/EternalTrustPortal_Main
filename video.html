@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🎥 Video Evidence – RobinsonVillage</title>
+  <meta charset="UTF-8" />
+  <title>📹 Video Evidence – Eternal RobinsonVillage Trust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      background-color: #121212;
-      color: white;
+      background: linear-gradient(to bottom, #2c2c2c, #1a3d2f);
+      color: #ffffff;
       font-family: Georgia, serif;
-      text-align: center;
-      padding: 20px;
-    }
-    iframe {
-      width: 90%;
-      max-width: 600px;
-      height: 340px;
-      border: none;
-      margin: 20px 0;
-      box-shadow: 0 0 10px #00ffcc88;
+      padding: 30px 20px;
+      margin: 0;
     }
     h1 {
       color: #00ffcc;
+      text-align: center;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .video-item {
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffcc55;
+    }
+    .video-item h3 {
+      color: #00ffcc;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 8px;
+    }
+    a.back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #00ffcc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a.back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>🎥 May 4th Trespass & Impound Videos</h1>
 
-  <iframe src="https://www.youtube.com/embed/0_LQIhBDl2E" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/rCb64sW_Xhs" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/D-M3EiagD0E" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/i1Dmt38Elhs" allowfullscreen></iframe>
+  <h1>📹 Video Evidence – May 4 & Oct 31 Incidents</h1>
 
-  <h1>🎥 Oct 31st Kidnapping</h1>
+  <div class="video-grid">
+    <!-- May 4 Evidence -->
+    <div class="video-item">
+      <h3>May 4: RPD Trespass & Impound Call #1</h3>
+      <iframe src="https://www.youtube.com/embed/0_LQIhBDl2E" allowfullscreen></iframe>
+    </div>
 
-  <iframe src="https://www.youtube.com/embed/OmDsURswBRM" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/3YL-qxpX-UQ" allowfullscreen></iframe>
+    <div class="video-item">
+      <h3>May 4: Impound Call #2 – Refusal to Identify</h3>
+      <iframe src="https://www.youtube.com/embed/rCb64sW_Xhs" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-item">
+      <h3>May 4: Impound Call #3 – Refused Vehicle Return</h3>
+      <iframe src="https://www.youtube.com/embed/D-M3EiagD0E" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-item">
+      <h3>May 4: Police Trespass – Initial Footage</h3>
+      <iframe src="https://www.youtube.com/embed/i1Dmt38Elhs" allowfullscreen></iframe>
+    </div>
+
+    <!-- Oct 31 Evidence -->
+    <div class="video-item">
+      <h3>Oct 31: Kidnapping Short #1</h3>
+      <iframe src="https://www.youtube.com/embed/OmDsURswBRM" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-item">
+      <h3>Oct 31: Kidnapping Short #2</h3>
+      <iframe src="https://www.youtube.com/embed/3YL-qxpX-UQ" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Return to Trust Portal</a>
+
 </body>
 </html>
